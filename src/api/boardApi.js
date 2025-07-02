@@ -7,4 +7,19 @@ export default {
         console.log('BOARD GET LIST: ', data);
         return data;
     },
+    async create(article) {
+        const formData = new FormData();
+        formData.append('title', article.title);
+        formData.append('writer', article.writer);
+        formData.append('content', article.content);
+        if (article.files) {
+            for (let i = 0; i < article.files.length; i++) {
+                formData.append('files', article.files[i]);
+            }
+        }
+        const { data } = await api.post(BASE_URL, formData, { headers });
+        console.log('BOARD POST: ', data);
+        return data;
+    },
+
 }
