@@ -1,5 +1,4 @@
 <script setup>
-import { downloadFile } from '@/util/download';
 import { useRoute, useRouter } from 'vue-router';
 import api from '@/api/boardApi';
 import { ref } from 'vue';
