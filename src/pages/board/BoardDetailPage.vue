@@ -45,13 +45,7 @@ load();
     </div>
   </div>
   <hr />
-  <!--
-  첨
-  부
-  파
-  일
-  목
-  록 -->
+  <!--첨부파일 목록 -->
   <div class="text-end">
     <div v-for="file in article.attaches" :key="file.no" class="attach">
 <span @click="download(file.no)">
